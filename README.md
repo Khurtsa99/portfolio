@@ -2,8 +2,8 @@
 
 SWE334 Интернет програмчлал · Бие даалт 2: хувийн портфолио вэбсайт.
 
-🔗 **Сайт:** https://ТАНЫ-САЙТ.vercel.app
-🐙 **Репозитори:** https://github.com/Khurtsa99/ТАНЫ-РЕПО
+🔗 **Сайт:** https://khurtsbold-portfolio.vercel.app
+🐙 **Репозитори:** https://github.com/Khurtsa99/portfolio
 
 ## Бүтээлч санаа
 
