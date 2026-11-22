@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="mn" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Хурцболд — Пиксел портфолио</title>
+  <meta name="description" content="Хурцболдын хувийн портфолио: пиксел өрөөний компьютер дотор орж бүтээлүүдийг нь үзээрэй.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E👾%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&family=Rubik:wght@400;500;700&family=Lora:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Дахин ашиглагдах пиксел дүр (зогсож буй Хурцболд) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="guy" viewBox="0 0 16 27">
+      <rect fill="#1a1a1a" x="4" y="0" width="8" height="2"/><rect fill="#1a1a1a" x="3" y="1" width="10" height="4"/>
+      <rect fill="#1a1a1a" x="2" y="3" width="2" height="5"/><rect fill="#1a1a1a" x="12" y="3" width="2" height="5"/>
+      <rect fill="#e0a77a" x="4" y="4" width="8" height="6"/>
+      <rect fill="#1a1a1a" x="4" y="4" width="8" height="1"/><rect fill="#1a1a1a" x="4" y="5" width="3" height="1"/>
+      <rect fill="#1b1b2f" x="5" y="7" width="1" height="2"/><rect fill="#1b1b2f" x="10" y="7" width="1" height="2"/>
+      <rect fill="#c46a4a" x="7" y="9" width="2" height="1"/>
+      <rect fill="#e0a77a" x="7" y="10" width="2" height="1"/>
+      <rect fill="#24304f" x="3" y="11" width="10" height="8"/>
+      <rect fill="#ffcc4d" x="7" y="13" width="2" height="2"/>
+      <rect fill="#24304f" x="1" y="12" width="2" height="7"/><rect fill="#24304f" x="13" y="12" width="2" height="7"/>
+      <rect fill="#e0a77a" x="1" y="19" width="2" height="1"/><rect fill="#e0a77a" x="13" y="19" width="2" height="1"/>
+      <rect fill="#2d2d4a" x="4" y="19" width="8" height="3"/>
+      <rect fill="#2d2d4a" x="4" y="22" width="3" height="3"/><rect fill="#2d2d4a" x="9" y="22" width="3" height="3"/>
+      <rect fill="#6b4a3a" x="3" y="25" width="4" height="2"/><rect fill="#6b4a3a" x="9" y="25" width="4" height="2"/>
+    </symbol>
+  </svg>
+
+  <!-- ============ ИНТРО ============ -->
+  <div id="intro" class="intro">
+    <div class="intro-name">
+      <svg class="faller" viewBox="0 0 16 27" shape-rendering="crispEdges" aria-hidden="true"><use href="#guy" width="16" height="27"/></svg>
+      <h1 class="iso-name" id="isoName">ХУРЦБОЛД</h1>
+    </div>
+    <p class="intro-hint">дарж үргэлжлүүлнэ үү</p>
+  </div>
+
+  <!-- ============ ПРОФАЙЛ КАРТ, ЦЭС, ХОЛБООС ============ -->
+  <a href="#home" class="profile" id="logo" aria-label="Өрөө рүү буцах">
+    <span class="profile-top">ХУРЦБОЛД<em>● Дадлага хайж байна</em></span>
+    <span class="profile-main">
+      <svg class="profile-av" viewBox="0 0 16 13" shape-rendering="crispEdges" aria-hidden="true"><use href="#guy" width="16" height="27"/></svg>
+      <span class="profile-text"><span class="profile-name">Хурцболд</span><span class="profile-meta">Хөгжүүлэгч · 2026</span></span>
+    </span>
+  </a>
+
+  <nav class="side-menu" id="navLinks">
+    <span class="menu-label">Цэс</span>
+    <a href="#projects" data-slide="0">БҮТЭЭЛҮҮД</a>
+    <a href="#playground" data-slide="1">ТОГЛООМ</a>
+    <a href="#contact" data-slide="2">ХОЛБОО БАРИХ</a>
+    <a href="#terminal" data-slide="3">ТЕРМИНАЛ</a>
+  </nav>
+
+  <div class="top-links">
+    <a href="https://github.com/Khurtsa99" target="_blank" rel="noopener">GitHub</a>
+    <a href="#contact" data-slide="2" class="js-slide">Имэйл</a>
+    <button id="soundBtn" class="icon-btn" aria-label="Хөгжим, дуу асаах/унтраах" title="Хөгжим">♫</button>
+    <button id="themeBtn" class="icon-btn theme-btn" title="Горим солих: Авто → Light → Dark"><span id="themeIcon">🕐</span><span id="themeLabel">Авто</span></button>
+    <button id="menuBtn" class="icon-btn menu-btn" aria-label="Цэс">☰</button>
+  </div>
+
+  <!-- ============ 1. ӨРӨӨ (камер эндээс компьютер руу ойртоно) ============ -->
+  <div id="stage" class="stage">
+    <div id="roomWrap" class="room-wrap">
+      <div id="bubble" class="bubble"></div>
+      <svg id="room" viewBox="-40 0 240 100" preserveAspectRatio="xMidYMax slice" shape-rendering="crispEdges" role="img" aria-label="Хурцболдын пиксел өрөө">
+            <defs>
+              <clipPath id="winClip"><rect x="12" y="10" width="36" height="28"/></clipPath>
+            </defs>
+
+            <!-- Хана, шал -->
+            <rect class="c-wall" x="-40" y="0" width="240" height="72"/>
+            <rect class="c-wall2" x="-40" y="64" width="240" height="8"/>
+            <rect class="c-wood2" x="-40" y="72" width="240" height="2"/>
+            <rect class="c-floor" x="-40" y="74" width="240" height="26"/>
+            <rect class="c-floor2" x="-40" y="80" width="240" height="1"/>
+            <rect class="c-floor2" x="-40" y="87" width="240" height="1"/>
+            <rect class="c-floor2" x="-40" y="94" width="240" height="1"/>
+            <rect class="c-floor2" x="30" y="74" width="1" height="6"/>
+            <rect class="c-floor2" x="90" y="81" width="1" height="6"/>
+            <rect class="c-floor2" x="60" y="88" width="1" height="6"/>
+            <rect class="c-floor2" x="130" y="74" width="1" height="6"/>
+            <rect class="c-floor2" x="15" y="95" width="1" height="5"/>
+
+
+            <!-- ХААЛГА → Миний тухай -->
+            <g class="hot door" data-id="door" data-label="🚪 Миний тухай" tabindex="0" role="button" aria-label="Миний тухай — хаалгаар орох">
+              <rect class="c-wood2" x="2" y="36" width="20" height="36"/>
+              <rect class="c-doorway" x="4" y="38" width="16" height="34"/>
+              <g class="door-panel">
+                <rect class="c-door" x="4" y="38" width="16" height="34"/>
+                <rect class="c-door2" x="6" y="41" width="12" height="11"/>
+                <rect class="c-door2" x="6" y="56" width="12" height="13"/>
+                <rect class="c-door" x="7" y="42" width="10" height="9"/>
+                <rect class="c-door" x="7" y="57" width="10" height="11"/>
+                <rect class="c-sun" x="17" y="53" width="2" height="2"/>
+              </g>
+              <rect class="c-sun" x="7" y="31" width="10" height="4"/>
+              <rect class="c-dark" x="9" y="32" width="1" height="2"/><rect class="c-dark" x="11" y="32" width="1" height="2"/>
+              <rect class="c-dark" x="13" y="32" width="1" height="2"/><rect class="c-dark" x="15" y="32" width="1" height="2"/>
+              <g class="marker"><rect x="24" y="40" width="2" height="4"/><rect x="24" y="45" width="2" height="1"/></g>
+            </g>
+
+            <!-- Жааз (өргөн дэлгэцэнд) -->
+            <rect class="c-wood2" x="166" y="16" width="16" height="12"/><rect class="c-poster" x="167" y="17" width="14" height="10"/>
+            <rect class="c-grass" x="167" y="23" width="14" height="4"/><rect class="c-sun" x="176" y="18" width="2" height="2"/>
+            <!-- ЦОНХ (easter egg: од харвах) -->
+            <g class="hot" data-id="window" transform="translate(35,-2) scale(1.4)" data-label="🌃 Цонх" tabindex="0" role="button" aria-label="Цонх">
+              <rect class="c-wood2" x="10" y="8" width="40" height="32"/>
+              <rect class="c-sky" x="12" y="10" width="36" height="28"/>
+              <g class="night">
+                <rect class="c-star" x="15" y="13" width="1" height="1"/><rect class="c-star" x="21" y="16" width="1" height="1"/>
+                <rect class="c-star tw" x="26" y="12" width="1" height="1"/><rect class="c-star" x="33" y="17" width="1" height="1"/>
+                <rect class="c-star tw" x="18" y="20" width="1" height="1"/><rect class="c-star" x="45" y="20" width="1" height="1"/>
+                <rect class="c-moon" x="38" y="12" width="6" height="6"/><rect class="c-sky" x="41" y="12" width="3" height="4"/>
+              </g>
+              <g class="day">
+                <rect class="c-sun" x="37" y="12" width="6" height="6"/>
+                <rect class="c-cloud" x="15" y="14" width="9" height="2"/><rect class="c-cloud" x="17" y="12" width="5" height="2"/>
+                <rect class="c-cloud" x="27" y="18" width="7" height="2"/>
+              </g>
+              <g clip-path="url(#winClip)">
+                <g id="shoot"><rect class="c-star" x="44" y="11" width="2" height="1"/><rect class="c-star dim" x="46" y="10" width="3" height="1"/></g>
+                <g id="bird"><rect class="c-bird" x="12" y="16" width="1" height="1"/><rect class="c-bird" x="13" y="17" width="1" height="1"/><rect class="c-bird" x="14" y="16" width="1" height="1"/>
+                  <rect class="c-bird" x="16" y="14" width="1" height="1"/><rect class="c-bird" x="17" y="15" width="1" height="1"/><rect class="c-bird" x="18" y="14" width="1" height="1"/></g>
+                <g id="snow" class="snow"></g>
+              </g>
+              <!-- Улаанбаатар: Богд уул, Зайсан толгой, Blue Sky цамхаг -->
+              <rect class="c-mtnfar" x="12" y="27" width="36" height="11"/>
+              <rect class="c-mtnfar" x="14" y="25" width="11" height="2"/><rect class="c-mtnfar" x="17" y="23" width="5" height="2"/>
+              <rect class="c-mtnfar" x="33" y="24" width="14" height="3"/><rect class="c-mtnfar" x="37" y="22" width="7" height="2"/>
+              <rect class="c-hill" x="12" y="31" width="9" height="7"/><rect class="c-hill" x="13" y="29" width="7" height="2"/>
+              <rect class="c-city" x="15" y="27" width="3" height="2"/><rect class="c-hill" x="16" y="28" width="1" height="1"/>
+              <rect class="c-city" x="21" y="30" width="4" height="8"/><rect class="c-city" x="25" y="27" width="4" height="11"/>
+              <rect class="c-city" x="31" y="29" width="4" height="9"/>
+              <rect class="c-tower" x="36" y="18" width="4" height="20"/><rect class="c-tower" x="37" y="16" width="3" height="2"/>
+              <rect class="c-tower" x="38" y="14" width="2" height="2"/><rect class="c-tower" x="39" y="12" width="1" height="2"/>
+              <rect class="c-city" x="41" y="26" width="3" height="12"/><rect class="c-city" x="44" y="30" width="4" height="8"/>
+              <g class="win-lights">
+                <rect class="c-lit" x="22" y="32" width="1" height="1"/><rect class="c-lit" x="26" y="29" width="1" height="1"/>
+                <rect class="c-lit" x="27" y="33" width="1" height="1"/><rect class="c-lit" x="32" y="31" width="1" height="1"/>
+                <rect class="c-lit" x="37" y="20" width="1" height="1"/><rect class="c-lit" x="38" y="24" width="1" height="1"/>
+                <rect class="c-lit" x="37" y="28" width="1" height="1"/><rect class="c-lit" x="38" y="32" width="1" height="1"/>
+                <rect class="c-lit" x="42" y="28" width="1" height="1"/><rect class="c-lit" x="45" y="32" width="1" height="1"/>
+              </g>
+              <rect class="c-wood2" x="29" y="10" width="2" height="28"/>
+              <rect class="c-wood" x="8" y="40" width="44" height="2"/>
+              <rect class="c-snow snow-sill" x="8" y="39" width="44" height="1"/>
+              <g class="marker"><rect x="22" y="3" width="2" height="4"/><rect x="22" y="8" width="2" height="1"/></g>
+            </g>
+
+            <!-- ПОСТЕР → Миний тухай -->
+            <!-- ЦАГ — Улаанбаатарын жинхэнэ цаг -->
+            <g class="hot" data-id="clock" data-label="🕐 Цаг" tabindex="0" role="button" aria-label="Улаанбаатарын цаг">
+              <rect class="c-dark" x="106" y="11" width="10" height="10"/>
+              <rect class="c-clock" x="107" y="12" width="8" height="8"/>
+              <rect class="c-dark" x="110.5" y="12.4" width="1" height=".8"/><rect class="c-dark" x="110.5" y="18.8" width="1" height=".8"/>
+              <rect class="c-dark" x="107.4" y="15.6" width=".8" height="1"/><rect class="c-dark" x="113.8" y="15.6" width=".8" height="1"/>
+              <line id="clockH" class="hand" x1="111" y1="16" x2="111" y2="13.8"/>
+              <line id="clockM" class="hand" x1="111" y1="16" x2="111" y2="12.9"/>
+              <g class="marker"><rect x="110" y="23" width="2" height="4"/><rect x="110" y="28" width="2" height="1"/></g>
+            </g>
+
+
+            <!-- ШИРЭЭ -->
+            <rect class="c-wood" x="48" y="58" width="66" height="3"/>
+            <rect class="c-wood2" x="48" y="61" width="66" height="2"/>
+            <rect class="c-wood2" x="50" y="63" width="3" height="27"/>
+            <rect class="c-wood2" x="109" y="63" width="3" height="27"/>
+            <!-- Аяга -->
+            <rect class="c-mug" x="53" y="54" width="4" height="4"/><rect class="c-mug" x="57" y="55" width="1" height="2"/><rect class="c-mug2" x="53" y="55" width="4" height="1"/>
+            <rect class="steam" x="54" y="50" width="1" height="2"/><rect class="steam s2" x="56" y="49" width="1" height="2"/>
+
+            <!-- КОМПЬЮТЕР → Бүтээлүүд -->
+            <g class="hot" data-id="monitor" data-label="💻 Бүтээлүүд" data-slide="0" tabindex="0" role="button" aria-label="Бүтээлүүд">
+              <rect class="c-dark" x="60" y="34" width="28" height="19"/>
+              <rect id="pcScreen" class="c-screen screen" x="62" y="36" width="24" height="15"/>
+              <rect class="c-code cl1" x="64" y="38" width="10" height="1"/>
+              <rect class="c-code cl2" x="66" y="40" width="14" height="1"/>
+              <rect class="c-code cl3" x="66" y="42" width="8" height="1"/>
+              <rect class="c-code cl4" x="64" y="44" width="12" height="1"/>
+              <rect class="c-sun cl5" x="66" y="46" width="6" height="1"/>
+              <rect class="c-dark" x="72" y="53" width="4" height="3"/>
+              <rect class="c-dark" x="68" y="56" width="12" height="2"/>
+              <g class="marker"><rect x="73" y="27" width="2" height="4"/><rect x="73" y="32" width="2" height="1"/></g>
+            </g>
+
+            <!-- УТАС → Холбоо барих -->
+            <g class="hot" data-id="phone" data-label="📱 Холбоо барих" data-slide="2" tabindex="0" role="button" aria-label="Холбоо барих">
+              <rect class="c-dark" x="89" y="49" width="6" height="9"/>
+              <rect class="c-screen screen" x="90" y="50" width="4" height="6"/>
+              <rect class="c-pink notif" x="93" y="48" width="2" height="2"/>
+              <g class="marker"><rect x="91" y="41" width="2" height="4"/><rect x="91" y="46" width="2" height="1"/></g>
+            </g>
+
+
+            <!-- БИ (сандал дээр) -->
+            <g class="hot" data-id="me" data-label="🙋 Хурцболд" tabindex="0" role="button" aria-label="Хурцболд">
+              <rect class="c-hair" x="69" y="45" width="9" height="8"/>
+              <rect class="c-hair" x="70" y="44" width="7" height="1"/>
+              <rect class="c-skin" x="68" y="48" width="1" height="2"/><rect class="c-skin" x="78" y="48" width="1" height="2"/>
+              <rect class="c-shirt" x="65" y="53" width="17" height="8"/>
+              <rect class="c-shirt" x="62" y="55" width="3" height="4"/><rect class="c-shirt" x="82" y="55" width="3" height="4"/>
+              <rect class="c-chair" x="64" y="59" width="19" height="12"/>
+              <rect class="c-chair2" x="66" y="61" width="15" height="8"/>
+              <rect class="c-dark" x="72" y="71" width="3" height="11"/>
+              <rect class="c-dark" x="66" y="82" width="15" height="2"/>
+              <rect class="c-dark" x="66" y="84" width="2" height="2"/><rect class="c-dark" x="79" y="84" width="2" height="2"/>
+              <g class="marker"><rect x="64" y="40" width="2" height="4"/><rect x="64" y="45" width="2" height="1"/></g>
+            </g>
+
+            <!-- МУУРЫН ТОГЛООМЫН ХЭСЭГ: ханан дээрх шат ба ор -->
+            <g class="cat-play" aria-hidden="true">
+              <rect class="c-wood" x="120" y="66" width="20" height="2"/><rect class="c-wood2" x="120" y="68" width="20" height="1"/><rect class="c-wood2" x="123" y="69" width="2" height="3"/><rect class="c-wood2" x="135" y="69" width="2" height="3"/>
+              <rect class="c-wood" x="136" y="52" width="20" height="2"/><rect class="c-wood2" x="136" y="54" width="20" height="1"/><rect class="c-wood2" x="139" y="55" width="2" height="3"/><rect class="c-wood2" x="151" y="55" width="2" height="3"/>
+              <rect class="c-wood" x="120" y="38" width="20" height="2"/><rect class="c-wood2" x="120" y="40" width="20" height="1"/><rect class="c-wood2" x="123" y="41" width="2" height="3"/><rect class="c-wood2" x="135" y="41" width="2" height="3"/>
+              <rect class="c-wood" x="136" y="24" width="20" height="2"/><rect class="c-wood2" x="136" y="26" width="20" height="1"/><rect class="c-wood2" x="139" y="27" width="2" height="3"/><rect class="c-wood2" x="151" y="27" width="2" height="3"/>
+              <rect class="c-bed" x="138" y="85" width="20" height="7"/>
+              <rect class="c-bedin" x="140" y="86" width="16" height="4"/>
+            </g>
+
+            <!-- МУУР -->
+            <g id="catPos" transform="translate(66,0)">
+            <g class="hot cat" data-id="cat" data-label="🐱 Муур" tabindex="0" role="button" aria-label="Муур">
+              <rect class="hit" x="15" y="77" width="21" height="16" fill="transparent"/>
+              <rect class="c-cat" x="17" y="83" width="3" height="2"/><rect class="c-cat" x="16" y="80" width="2" height="4"/>
+              <rect class="c-cat" x="20" y="85" width="11" height="6"/>
+              <rect class="c-cat2" x="22" y="85" width="2" height="6"/><rect class="c-cat2" x="26" y="85" width="2" height="6"/>
+              <rect class="c-cat" x="28" y="80" width="7" height="7"/>
+              <rect class="c-cat" x="28" y="78" width="2" height="2"/><rect class="c-cat" x="33" y="78" width="2" height="2"/>
+              <rect class="c-eye eye" x="29" y="82" width="1" height="1"/><rect class="c-eye eye" x="33" y="82" width="1" height="1"/>
+              <rect class="c-pink" x="31" y="84" width="1" height="1"/>
+              <rect class="c-cat2 leg l-a" x="21" y="91" width="2" height="1"/><rect class="c-cat2 leg l-b" x="29" y="91" width="2" height="1"/>
+              <rect class="c-eye eye-closed" x="29" y="82.6" width="1.4" height=".5"/><rect class="c-eye eye-closed" x="32.6" y="82.6" width="1.4" height=".5"/>
+              <g class="zzz"><rect class="c-zzz z1" x="35" y="77" width="1" height="1"/><rect class="c-zzz z2" x="36.5" y="75" width="1.2" height="1.2"/><rect class="c-zzz z3" x="38" y="72.5" width="1.5" height="1.5"/></g>
+              <g class="marker"><rect x="30" y="71" width="2" height="4"/><rect x="30" y="76" width="2" height="1"/></g>
+            </g>
+            </g>
+            <rect class="c-bed bed-front" x="137" y="89" width="22" height="3" aria-hidden="true"/>
+          </svg>
+    </div>
+  </div>
+
+  <div id="hud" class="hud fade-out" hidden>🔍 Олдсон: <b id="foundCount">0/12</b></div>
+
+  <!-- Зүүн доод булангийн дүр ба танилцуулга -->
+  <div id="guide" class="guide fade-out">
+    <button id="guideGuy" class="guide-guy" aria-label="Хурцболд"><svg viewBox="0 0 16 27" shape-rendering="crispEdges" aria-hidden="true"><use href="#guy" width="16" height="27"/></svg></button>
+    <div class="guide-bubble" id="guideBubble">
+      <button id="guideClose" class="guide-close" aria-label="Хаах" title="Хаах">✕</button>
+      <h1>Сайн уу, би Хурцболд 👋</h1>
+      <p class="role">&gt; <span id="typed"></span><span class="blink">▌</span></p>
+      <p id="guideText">Кодоор хүмүүсийн өдөр тутмыг арай хялбар, арай хөгжилтэй болгох зүйлс бүтээдэг. Доош гүйлгэж компьютер дотор минь бүтээлүүдийг үзээрэй, эсвэл <b>хаалгаар</b> орж надтай танилцаарай 🚪</p>
+    </div>
+  </div>
+
+  <p id="scrollHint" class="scroll-hint fade-out"><span class="arrow">⬇</span> Доош гүйлгэ</p>
+
+  <!-- ============ МИНИЙ ТУХАЙ — тусдаа, тайван хуудас ============ -->
+  <div id="aboutPage" class="about-page" aria-hidden="true">
+    <!-- Гүйлгэх тусам үг үгээрээ тодорч гарах танилцуулга -->
+    <section class="ap-statement" id="apStatement">
+      <div class="ap-statement-inner">
+        <p class="statement" id="statement">Би Санхүү, эдийн засгийн их сургуулийн 4-р курсын оюутан. Кодоор хүмүүсийн өдөр тутмыг арай хялбар, арай хөгжилтэй болгох зүйлс бүтээдэг.</p>
+        <p class="statement-hint">↓ доош гүйлгэ</p>
+      </div>
+    </section>
+    <div class="ap-inner">
+      <div class="ap-top">
+        <div class="ap-left">
+          <figure class="polaroid">
+            <!-- Өөрийн зургаа тавих бол доорх svg-ийн оронд: <img src="me.jpg" alt="Хурцболд"> -->
+            <div class="photo">
+              <svg viewBox="0 0 16 16" shape-rendering="crispEdges" aria-hidden="true"><use href="#guy" width="16" height="27"/></svg>
+            </div>
+            <figcaption>Хурцболд · 2026</figcaption>
+          </figure>
+          <div class="walker" aria-hidden="true"><svg viewBox="0 0 16 27" shape-rendering="crispEdges"><use href="#guy" width="16" height="27"/></svg></div>
+        </div>
+
+        <div class="bio">
+          <h2>Намтар</h2>
+          <p>Сайн уу, би <b>Хурцболд</b>. <b>Санхүү, эдийн засгийн их сургуулийн 4-р курсын</b> оюутан. <b>Надад код бичих нь ажил гэхээсээ илүү тоглоом шиг санагддаг.</b> Шинэ санаа туршиж, ямар нэг зүйлийг илүү хялбар болгох арга хайх дуртай.</p>
+          <p>Төсөл бүрийг хэрэглэгч юунд хүндрэлтэй байгааг ойлгохоос эхэлдэг. <b>ZenFlow</b> дээр йогийн студийн хичээлийн бүртгэлийг хэдхэн товшилтоор хийдэг болгохыг, <b>«50 сая-ийн уналт»</b> апп дээр алдартай тоглоомыг утсан дээр хөгжилтэй болгохыг зорьсон.</p>
+          <p>Хамгийн их таалагддаг зүйл бол хүмүүсийн <b>өдөр тутамд үнэхээр хэрэг болох</b> бүтээгдэхүүн хийх. Чөлөөт цагаараа тоглоом тоглож, шинэ технологи туршдаг.</p>
+          <p>Одоогоор <b>вэб эсвэл мобайл хөгжүүлэгчийн дадлага</b> хайж байна. Хамтран ажиллах бол <a href="#contact" id="bioContact">холбогдоорой</a>.</p>
+        </div>
+      </div>
+
+      <div class="ap-cols">
+        <section>
+          <h3>Ур чадвар</h3>
+          <div id="skillGroups"></div>
+        </section>
+        <section>
+          <h3>Хийх зүйлс (30 нас хүрэхээс өмнө)</h3>
+          <ul id="bucket" class="bucket"></ul>
+        </section>
+      </div>
+
+      <p class="ap-back"><button id="aboutBack">← Өрөө рүү буцах</button></p>
+    </div>
+  </div>
+
+  <!-- Хаалгаар ороход гарах гэрэл -->
+  <div id="doorFlash" class="door-flash"></div>
+
+  <!-- Дэлгэцийн гэрэл (zoom-ийн төгсгөлд дэлгэц бүтэн болно) -->
+  <div id="flash" class="flash"></div>
+
+  <!-- ============ 2. КОМПЬЮТЕР ДОТОР ============ -->
+  <div id="os" class="os" aria-hidden="true">
+    <div class="os-stage">
+      <!-- БҮТЭЭЛҮҮД -->
+      <section class="slide works" id="projects" data-title="БҮТЭЭЛҮҮД">
+        <div class="works-stage">
+          <div id="carousel" class="carousel" aria-label="Бүтээлүүд"></div>
+          <div class="works-title" id="tvText">
+            <h3 id="tvTitle"></h3>
+            <p id="tvDesc"></p>
+            <div class="tv-meta"><ul id="tvTags" class="tags"></ul><span id="tvLinks" class="card-links"></span></div>
+          </div>
+          <div class="works-count">
+            <button id="carPrev" class="tv-btn" aria-label="Өмнөх">◀</button>
+            <span class="tv-count"><b id="carCount">01</b><small id="carTotal">/04</small></span>
+            <button id="carNext" class="tv-btn" aria-label="Дараах">▶</button>
+          </div>
+          <p class="works-hint">↓ гүйлгэж суваг соль</p>
+        </div>
+      </section>
+
+      <!-- ТОГЛООМ -->
+      <section class="slide" id="playground" data-title="ТОГЛООМ.EXE">
+        <div class="slide-inner"><div class="wrap center">
+          <p class="sec-label anim" style="--i:0">02 / ТОГЛООМЫН ӨРӨӨ</p>
+          <h2 class="anim" style="--i:1">Алдаа агнуур 🐛</h2>
+          <p class="sec-sub anim" style="--i:2">Кодонд нуугдсан алдаануудыг 20 секундэд аль болох олныг нь дараарай!</p>
+          <div class="game anim" style="--i:3">
+            <div class="game-hud">
+              <span>Оноо: <b id="score">0</b></span>
+              <span>Хугацаа: <b id="time">20</b>с</span>
+              <span>Рекорд: <b id="best">0</b></span>
+            </div>
+            <div class="board" id="board"></div>
+            <p id="gameMsg" class="game-msg"></p>
+            <button id="gameStart" class="px-btn">▶ ТОГЛОХ</button>
+          </div>
+        </div></div>
+      </section>
+
+      <!-- ХОЛБОО БАРИХ -->
+      <section class="slide" id="contact" data-title="ХОЛБОО_БАРИХ">
+        <div class="slide-inner"><div class="wrap">
+          <p class="sec-label anim" style="--i:0">03 / ХОЛБОО БАРИХ</p>
+          <h2 class="anim" style="--i:1">Хамтдаа гоё зүйл бүтээе!</h2>
+          <p class="sec-sub anim" style="--i:2">Дадлага, хамтын төсөл, эсвэл зүгээр л мэндлэх бол бичээрэй.</p>
+          <div class="contact-grid">
+            <div class="contact-card anim" style="--i:3">
+              <span class="c-ico">✉️</span>
+              <h3>Имэйл</h3>
+              <p id="email" class="mono">khurtsboldlkhagva@gmail.com</p>
+              <div class="row">
+                <a class="px-btn small" href="mailto:khurtsboldlkhagva@gmail.com">Бичих</a>
+                <button id="copyBtn" class="px-btn small ghost">Хуулах</button>
+              </div>
+            </div>
+            <a class="contact-card anim" style="--i:4" href="https://github.com/Khurtsa99" target="_blank" rel="noopener">
+              <span class="c-ico">🐙</span><h3>GitHub</h3><p class="mono">@Khurtsa99</p>
+            </a>
+            <a class="contact-card anim" style="--i:5" href="#" target="_blank" rel="noopener">
+              <span class="c-ico">💼</span><h3>LinkedIn</h3><p class="mono">/in/khurtsbold</p>
+            </a>
+            <a class="contact-card anim" style="--i:6" href="#" target="_blank" rel="noopener">
+              <span class="c-ico">📸</span><h3>Instagram</h3><p class="mono">@khurtsbold</p>
+            </a>
+          </div>
+          <footer class="os-footer anim" style="--i:7">
+            <p>© <span id="year"></span> Хурцболд · HTML, CSS, JavaScript-ээр гараар кодлов</p>
+            <p class="secret">Psst… гар дээрээ «hello» гэж бичээд үз 👀</p>
+          </footer>
+        </div></div>
+      </section>
+
+      <!-- ТЕРМИНАЛ -->
+      <section class="slide" id="terminal" data-title="ТЕРМИНАЛ.EXE">
+        <div class="slide-inner"><div class="wrap">
+          <p class="sec-label anim" style="--i:0">04 / ТЕРМИНАЛ</p>
+          <h2 class="anim" style="--i:1">Командаар танилцъя</h2>
+          <p class="sec-sub anim" style="--i:2"><code>help</code> гэж бичээд Enter дарна уу. Tab товч командыг гүйцээнэ.</p>
+          <div class="term anim" style="--i:3" id="term">
+            <div class="term-bar"><i></i><i></i><i></i><span>khurts@ub: ~</span></div>
+            <div class="term-out" id="termOut" aria-live="polite"></div>
+            <form class="term-line" id="termForm">
+              <label for="termIn" class="term-prompt">khurts@ub:~$</label>
+              <input id="termIn" autocomplete="off" spellcheck="false" autocapitalize="off" aria-label="Терминалын команд">
+            </form>
+          </div>
+        </div></div>
+      </section>
+
+      <div id="wipe" class="wipe" aria-hidden="true"></div>
+    </div>
+
+    <nav class="dock" id="dock">
+      <span id="osPath" class="os-path">C:\ХУРЦБОЛД\</span>
+      <span class="dock-apps">
+      <button data-slide="0"><span>💻</span>Бүтээлүүд</button>
+      <button data-slide="1"><span>🕹️</span>Тоглоом</button>
+      <button data-slide="2"><span>✉️</span>Холбоо</button>
+      <button data-slide="3"><span>⌨️</span>Терминал</button>
+      </span>
+      <span class="os-right"><span id="osClock" class="os-clock">00:00</span><button id="exitBtn" class="os-exit">⏏ Өрөө</button></span>
+    </nav>
+  </div>
+
+  <button id="partyBadge" class="party-badge" title="Дарж унтраах">🌈 Солонго горим · дахин «hello» эсвэл энд дарж унтраана</button>
+  <div id="tip" class="tip"></div>
+  <div id="toasts" class="toasts"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
